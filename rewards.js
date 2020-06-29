@@ -78,6 +78,7 @@ async function main() {
       if (total % 1000 === 0) {
         console.log(`Positive hit ${total}`);
       }
+
       const t = Date.parse(words[0]);
       await write(`${t}, ${data.layer_id}, ${data.reward}, ${data.account}\n`);
     }
