@@ -1,0 +1,67 @@
+2020-06-17T16:35:42.602+0300	INFO	9283a.sync         .blockFetchQueue	finished block 6efd7, valid	{"node_id": "9283a"}
+2020-06-17T16:35:42.602+0300	INFO	9283a.sync         	layer 3407 done	{"node_id": "9283a"}
+2020-06-17T16:35:42.602+0300	INFO	9283a.mesh         	Validate layer 3407	{"node_id": "9283a"}
+2020-06-17T16:35:42.602+0300	INFO	9283a.trtl         	tortoise update tables	{"node_id": "9283a", "layer_id": 3407, "n_blocks": 39}
+2020-06-17T16:35:43.693+0300	INFO	9283a.trtl         	found minimal good layer 3406, 2415759874	{"node_id": "9283a"}
+2020-06-17T16:35:43.810+0300	INFO	9283a.trtl         	found new complete and good pattern for layer 3406 pattern 2415759874 with 39 support 	{"node_id": "9283a"}
+2020-06-17T16:35:43.810+0300	INFO	9283a.trtl         	tortoise finished layer in 1.207460784s	{"node_id": "9283a", "layer_id": 3407, "pbase": 3406}
+2020-06-17T16:35:43.810+0300	INFO	9283a.mesh         	set processed layer to 3407	{"node_id": "9283a"}
+2020-06-17T16:35:43.810+0300	INFO	00000.defaultLogger	persist tortoise
+2020-06-17T16:35:43.973+0300	INFO	00000.defaultLogger	Reward calculated	{"layer_id": 3405, "total_reward": 50000000000000, "num_blocks": 42, "block_reward": 1190476190476, "reward_remainder": 8}
+2020-06-17T16:35:43.973+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x7cac7", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x7cac7", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.974+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x8fF71", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.975+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.975+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.975+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.975+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x8fEc3", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.975+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x1B322", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0xDc353", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.977+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x25F11", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0xDc353", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x679c9", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0xDcD00", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.978+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x7b742", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.980+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0x00000", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.980+0300	INFO	9283a.state        	Reward applied	{"node_id": "9283a", "account": "0xaFEd9", "reward": 1190476190476, "layer_id": 3405}
+2020-06-17T16:35:43.982+0300	INFO	9283a.state        	new state root	{"node_id": "9283a", "layer_id": 3405, "state_root": "0x65ff0bf81bf6ca82218c609a5f60dfdae1d6382f9213cae9b95a2069160c74f2"}
+2020-06-17T16:35:43.982+0300	INFO	00000.defaultLogger	Reward calculated	{"layer_id": 3405, "total_reward": 50000000000000, "num_blocks": 42, "block_reward": 1190476190476, "reward_remainder": 8}
+2020-06-17T16:35:43.983+0300	INFO	9283a.state        	new state root	{"node_id": "9283a", "layer_id": 3405, "state_root": "0x65ff0bf81bf6ca82218c609a5f60dfdae1d6382f9213cae9b95a2069160c74f2"}
+2020-06-17T16:35:43.983+0300	INFO	9283a.mesh         	applied transactions	{"node_id": "9283a", "valid_block_txs": 0, "layer_id": 3405, "num_failed_txs": 0}
+2020-06-17T16:35:43.983+0300	INFO	9283a.mesh         	end of layer state root	{"node_id": "9283a", "event": true, "layer_id": 3405, "state_root": "65ff0bf81bf6ca82218c609a5f60dfdae1d6382f9213cae9b95a2069160c74f2"}
+2020-06-17T16:35:43.983+0300	INFO	9283a.mesh         	new layer hash	{"node_id": "9283a", "event": true, "layer_id": 3405, "layer_hash": "a20c895148a1fe5b215494c3adb1bcd6fb9d15bb4e5ef3c0b2dca95e1e47c999"}
+2020-06-17T16:35:43.983+0300	INFO	9283a.mesh         	done validating layer 3407	{"node_id": "9283a"}
+2020-06-17T16:35:43.983+0300	INFO	9283a.sync         	syncing layer	{"node_id": "9283a", "current_sync_layer": 3408, "last_ticked_layer": 3412}
+2020-06-17T16:35:43.983+0300	INFO	9283a.sync         .peers        	now connected	{"node_id": "9283a", "n_peers": 3}
+2020-06-17T16:35:43.983+0300	INFO	9283a.sync         	fetch layer hash	{"node_id": "9283a", "layer_id": 3408}
+2020-06-17T16:35:43.983+0300	INFO	9283a.sync         .peers        	now connected	{"node_id": "9283a", "n_peers": 3}
+2020-06-17T16:35:44.177+0300	INFO	9283a.sync         	layer 3408 has blocks	{"node_id": "9283a"}
+2020-06-17T16:35:44.177+0300	INFO	9283a.sync         	fetch layer ids	{"node_id": "9283a", "layer_id": 3408}
+2020-06-17T16:35:44.388+0300	INFO	9283a.sync         	layer 3408 wait for 51 blocks	{"node_id": "9283a"}
+2020-06-17T16:35:44.388+0300	INFO	9283a.sync         .peers        	now connected	{"node_id": "9283a", "n_peers": 3}
