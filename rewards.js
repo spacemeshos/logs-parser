@@ -48,7 +48,7 @@ async function main() {
     });
   }
 
-  await write('time-stamp, layer_id, reward_amount, reward_account\n');
+  await write('account, rewards, amount\n');
 
   for await (const line of rl) {
 
@@ -69,19 +69,17 @@ async function main() {
       }
 
       if (rewards.has(data.account)) {
-          rewards.set (data.account, rewards.get(data.account) + BigInt(data.reward));
+          let v = rewards.get(data.account);
+          v.total++;
+          v.amount = v.amount + BigInt(data.reward);
+          rewards.set (data.account, v);
       } else {
-          rewards.set(data.account, BigInt(data.reward));
+          rewards.set(data.account, {total: 0, amount: BigInt(data.reward)});
       }
-
-      const words = line.split("	");
-      const t = Date.parse(words[0]);
-      await write(`${t}, ${data.layer_id}, ${data.reward}, ${data.account}\n`);
     }
   }
-
-  console.log(rewards);
-
+  rewards.forEach( async (value, key, map) =>
+    await write (`${key}, ${value.total}, ${value.amount.toString()}\n`));
 }
 
 (async () => {
