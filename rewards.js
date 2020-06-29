@@ -15,6 +15,8 @@ const readline = require('readline');
 const fs = require('fs');
 const path = require('path');
 
+let rewards = new Map();
+
 async function main() {
   const args = process.argv.slice(2);
 
@@ -48,9 +50,6 @@ async function main() {
 
   await write('time-stamp, layer_id, reward_amount, reward_account\n');
 
-  let total = 0;
-  let skipped = 0;
-
   for await (const line of rl) {
 
     if (line.match(/Reward applied/)) {
@@ -66,23 +65,23 @@ async function main() {
       const data = JSON.parse(res);
 
       if (data.account === '0x00000') {
-        skipped += 1;
-        if (skipped % 10000 === 0)
-          console.log(`Skipped ${skipped} null accounts`);
         continue;
       }
 
-      const words = line.split("	");
-
-      total += 1;
-      if (total % 1000 === 0) {
-        console.log(`Positive hit ${total}`);
+      if (rewards.has(data.account)) {
+          rewards.set (data.account, rewards.get(data.account) + BigInt(data.reward));
+      } else {
+          rewards.set(data.account, BigInt(data.reward));
       }
 
+      const words = line.split("	");
       const t = Date.parse(words[0]);
       await write(`${t}, ${data.layer_id}, ${data.reward}, ${data.account}\n`);
     }
   }
+
+  console.log(rewards);
+
 }
 
 (async () => {
