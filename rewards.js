@@ -19,7 +19,7 @@ async function main() {
   const args = process.argv.slice(2);
 
   if (!args[0])
-    throw new Error('Must pass input log file as first argument.');
+    throw new Error('Must pass input log file name as first argument.');
 
   const input = path.resolve(args[0]);
 
@@ -52,7 +52,11 @@ async function main() {
   let skipped = 0;
 
   for await (const line of rl) {
+
     if (line.match(/Reward applied/)) {
+
+      //console.log(`${line}`);
+
       const res = line.match(/{["\w:\s,]*}/);
       if (!res) {
         console.log('WARN: unexpected regex miss, JSON not found.');
@@ -68,20 +72,14 @@ async function main() {
         continue;
       }
 
-      const tmatch = line.match(/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}-\d{4}/);
-      if (!tmatch) {
-        console.log('WARN: unexpected regex miss, timestamp not found.');
-        continue;
-      }
+      const words = line.split("	");
 
       total += 1;
-      if (total % 1000 === 0)
+      if (total % 1000 === 0) {
         console.log(`Positive hit ${total}`);
-
-      const timestamp = new Date(tmatch[0])
-      const unixEpoch = new Date(timestamp).getTime();
-
-      await write(`${unixEpoch}, ${data.layer_id}, ${data.reward}, ${data.account}\n`);
+      }
+      const t = Date.parse(words[0]);
+      await write(`${t}, ${data.layer_id}, ${data.reward}, ${data.account}\n`);
     }
   }
 }

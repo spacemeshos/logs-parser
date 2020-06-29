@@ -1,0 +1,24 @@
+{
+  "name": "logs-parser",
+  "version": "0.0.1",
+  "description": "Simple log parser",
+  "main": "rewards.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacemeshos/logs-parser.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spacemeshos/logs-parser/issues"
+  },
+  "homepage": "https://github.com/spacemeshos/logs-parser#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "readline": "^1.3.0"
+  }
+}
