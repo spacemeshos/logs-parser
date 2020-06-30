@@ -37,18 +37,17 @@ async function main() {
 
   const fileStream = await fs.createReadStream(input);
 
+  const writer = fs.createWriteStream(output);
+  await write('account, rewards, amount, out_txs, in_txs\n');
+
   const rl = await readline.createInterface({
     input: fileStream
   });
-
-  const writer = fs.createWriteStream(output);
 
   rl.on('line', (line) => {
     parseRewards(line);
     parseTransactions(line);
   });
-
-  await write('account, rewards, amount, out_txs, in_txs\n');
 
   await once(rl, 'close');
 
