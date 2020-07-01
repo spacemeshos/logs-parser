@@ -35,7 +35,7 @@ async function main() {
 
   let output = args[1] ? path.resolve(args[1]) : path.resolve('logs.csv');
 
-  const fileStream = await fs.createReadStream(input);
+  const fileStream = fs.createReadStream(input);
 
   const writer = fs.createWriteStream(output);
   await write('account, rewards, amount, out_txs, in_txs\n');
