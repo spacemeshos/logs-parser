@@ -17,6 +17,7 @@ const fs = require('fs');
 const path = require('path');
 const {once} = require('events');
 
+
 let accounts = new Map();
 
 if (typeof BigInt !== 'function')
@@ -44,9 +45,20 @@ async function main() {
     input: fileStream
   });
 
+  // set to false to parse local log text file (not server generated json)
+  const log_frmt_json = true;
+
   rl.on('line', (line) => {
-    parseRewards(line);
-    parseTransactions(line);
+    if (log_frmt_json) {
+      const logEntry = JSON.parse(line);
+      const data = logEntry.log;
+      parseRewards(data);
+      parseTransactions(data);
+    } else {
+      const line = JSON.parse(line);
+      parseRewards(line);
+      parseTransactions(line);
+    }
   });
 
   await once(rl, 'close');
