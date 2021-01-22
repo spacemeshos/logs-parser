@@ -46,7 +46,7 @@ async function main() {
   });
 
   // set to false to parse local log text file (not server generated json)
-  const log_frmt_json = true;
+  const log_frmt_json = false;
 
   rl.on('line', (line) => {
     if (log_frmt_json) {
@@ -55,7 +55,6 @@ async function main() {
       parseRewards(data);
       parseTransactions(data);
     } else {
-      const line = JSON.parse(line);
       parseRewards(line);
       parseTransactions(line);
     }
