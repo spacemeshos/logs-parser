@@ -46,12 +46,12 @@ async function main() {
   });
 
   // set to false to parse local log text file (not server generated json)
-  const log_frmt_json = false;
+  const log_frmt_json = true;
 
   rl.on('line', (line) => {
     if (log_frmt_json) {
       const logEntry = JSON.parse(line);
-      const data = logEntry.log;
+      const data = logEntry._source.sm;
       parseRewards(data);
       parseTransactions(data);
     } else {
@@ -77,17 +77,10 @@ async function main() {
   }
 }
 
-function parseTransactions(line) {
-  if (!line.match(/transaction processed/))
-    return;
-
-  const res = line.match(/{[^]*}/);
-  if (!res) {
-    console.log('WARN: unexpected regex miss, JSON not found.');
+function parseTransactions(data) {
+  if (data === undefined || data.M  !== "transaction processed") {
     return;
   }
-
-  const data = JSON.parse(res);
 
   // ugly but the current tx data in the log is not valid json
   const items = data.transaction.split(', ');
@@ -105,25 +98,15 @@ function parseTransactions(line) {
   if (accounts.has(recipient)) {
     let v = accounts.get(recipient);
     v.in_txs++;
-    accounts.set (recipient, v);
+    accounts.set(recipient, v);
   } else {
     accounts.set(recipient, {total: 0, amount: BigInt(0), in_txs: 1, out_txs: 0});
   }
 }
 
-function parseRewards(line) {
-  if (!line.match(/Reward applied/))
-    return;
+function parseRewards(data) {
 
-  const res = line.match(/{[^]*}/);
-  if (!res) {
-    console.log(`WARN: unexpected regex miss, JSON not found. ${line}`);
-    return;
-  }
-
-  const data = JSON.parse(res);
-
-  if (data.account === '0x00000') {
+  if (data == undefined || data.reward == null || data.account == null || data.account === '0x00000') {
     return;
   }
 
